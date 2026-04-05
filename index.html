@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Odiero | Full-Stack Developer & Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ea580c', // Orange
+                        secondary: '#7c3aed', // Purple
+                        accent: '#059669', // Emerald
+                        dark: '#000000', // Black
+                        light: '#ffffff', // White
+                        gray: {
+                            50: '#f9fafb',
+                            100: '#f3f4f6',
+                            200: '#e5e7eb',
+                            300: '#d1d5db',
+                            400: '#9ca3af',
+                            500: '#6b7280',
+                            600: '#4b5563',
+                            700: '#374151',
+                            800: '#1f2937',
+                            900: '#111827'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'gradient': 'gradient 8s linear infinite',
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                    },
+                    keyframes: {
+                        gradient: {
+                            '0%, 100%': { 'background-position': '0% 50%' },
+                            '50%': { 'background-position': '100% 50%' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light text-slate-900 transition-colors duration-300">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-900">Alpha Odiero</a>
+            <div class="hidden md:flex items-center space-x-7">
+                <div class="flex items-center space-x-8 text-sm font-medium text-slate-700">
+                    <a href="#about" class="hover:text-primary transition-colors">About</a>
+                    <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                    <a href="#services" class="hover:text-primary transition-colors">Services</a>
+                    <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                </div>
+                <a href="assets/Alpha_Odiero_CV.pdf" download class="inline-flex items-center px-5 py-3 rounded-full border border-slate-300 text-sm font-semibold text-slate-700 hover:border-primary hover:text-primary transition">Download CV</a>
+            </div>
+            <button class="md:hidden text-2xl" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute top-full left-0 w-full border-t border-slate-200 py-4 px-6 space-y-4 shadow-xl">
+            <a href="#about" class="block hover:text-primary">About</a>
+            <a href="#skills" class="block hover:text-primary">Skills</a>
+            <a href="#projects" class="block hover:text-primary">Projects</a>
+            <a href="#services" class="block hover:text-primary">Services</a>
+            <a href="#contact" class="block hover:text-primary">Contact</a>
+            <a href="assets/Alpha_Odiero_CV.pdf" download class="block py-3 px-4 rounded-full border border-slate-200 text-center font-semibold hover:bg-primary/10 transition">Download CV</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(236,72,153,0.08),transparent_32%)]">
+        <div class="container mx-auto px-6 py-24">
+            <div class="hero-grid max-w-6xl mx-auto">
+                <div class="hero-left space-y-10">
+                    <div class="hero-tag">Hello, I'm</div>
+                    <div>
+                        <h1 class="hero-title">Alpha Odiero</h1>
+                        <p class="hero-subtitle">Full-Stack Developer & Designer <span class="text-secondary">From Kenya</span></p>
+                    </div>
+                    <p class="hero-copy">Let's build something impactful together. Currently expanding my expertise in backend development, system design, and cybersecurity. I'm open to freelance work, collaborations, and learning opportunities.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#about" class="btn-primary">About Me</a>
+                    <a href="#contact" class="btn-secondary">Contact</a>
+                    <a href="assets/Alpha_Odiero_CV.pdf" download class="btn-secondary">Download CV</a>
+                    </div>
+                    <div class="hero-socials inline-flex items-center gap-4 text-slate-500 text-sm">
+                        <span>Follow me:</span>
+                        <a href="mailto:collinsodiera8@gmail.com" class="text-slate-600 hover:text-primary" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/254715519158" target="_blank" class="text-slate-600 hover:text-primary" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://linkedin.com/in/alpha-odiero" target="_blank" class="text-slate-600 hover:text-primary" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/alpha-odiero" target="_blank" class="text-slate-600 hover:text-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="hero-right relative">
+                    <div class="hero-image-bg"></div>
+                    <div class="hero-image-card rounded-[2.5rem] overflow-hidden shadow-[0_40px_120px_rgba(15,23,42,0.12)] border border-slate-200 bg-white">
+                        <img src="assets/icons/hero.png" alt="Alpha Odiero portrait" class="hero-image">
+                        <div class="hero-image-overlay">
+                            <span class="hero-image-label">Full-Stack Developer</span>
+                            <strong class="hero-image-heading">I build modern, polished digital experiences</strong>
+                            <p class="hero-image-copy">I combine design, code, and strong UX to bring projects from idea to launch.</p>
+                            <a href="#projects" class="hero-image-btn">Hire Me</a>
+                        </div>
+                    </div>
+                    <div class="hero-floating-card hero-floating-card-1">
+                        <img src="assets/icons/react.svg" alt="React logo" class="hero-badge-logo">
+                        <span>React</span>
+                    </div>
+                    <div class="hero-floating-card hero-floating-card-2">
+                        <img src="assets/icons/vscode.svg" alt="VS Code logo" class="hero-badge-logo">
+                        <span>VS Code</span>
+                    </div>
+                    <div class="hero-floating-card hero-floating-card-3">
+                        <img src="assets/icons/figma.svg" alt="Figma logo" class="hero-badge-logo">
+                        <span>Figma</span>
+                    </div>
+                    <div class="hero-floating-card hero-floating-card-4">
+                        <img src="assets/icons/express.svg" alt="Express JS logo" class="hero-badge-logo">
+                        <span>Express JS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-features py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="hero-features-grid max-w-6xl mx-auto grid gap-4 grid-cols-1 sm:grid-cols-3">
+                <div class="feature-card">
+                    <span class="feature-icon bg-primary/10 text-primary"><i class="fas fa-bullseye"></i></span>
+                    <div>
+                        <h3>Pixel Perfect</h3>
+                        <p>Clean UI with attention to spacing, typography and visual hierarchy.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon bg-secondary/10 text-secondary"><i class="fas fa-brush"></i></span>
+                    <div>
+                        <h3>High Quality</h3>
+                        <p>Modern development practices with responsive, polished results.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon bg-accent/10 text-accent"><i class="fas fa-lightbulb"></i></span>
+                    <div>
+                        <h3>Smart Ideas</h3>
+                        <p>Thoughtful solutions built for usability, speed, and growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-[#f7f9ff]">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                    <div class="relative">
+                        <div class="about-image-card rounded-[2.5rem] overflow-hidden shadow-[0_40px_120px_rgba(15,23,42,0.12)] border border-slate-200 bg-white">
+                            <img src="assets/icons/hero.png" alt="Alpha Odiero portrait" class="about-image">
+                            <div class="about-overlay-card about-overlay-top">
+                                <span class="about-overlay-title">2 Years of Success</span>
+                            </div>
+                            <div class="about-overlay-card about-overlay-bottom">
+                                <span class="about-overlay-title">10+ Projects Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="max-w-xl">
+                            <p class="text-sm uppercase tracking-[0.28em] text-primary font-semibold">I’m a Developer</p>
+                            <h3 class="text-4xl md:text-5xl font-bold text-slate-900 mt-5">About me.</h3>
+                            <p id="about-text" class="mt-6 text-slate-600 leading-relaxed text-lg">I’m Alpha Odiero, a creative technologist focused on building modern, user-centered digital experiences. I combine design, development, and problem-solving to create responsive websites, intuitive interfaces, and visually engaging products.
+
+My work spans web development, WordPress solutions, and graphic design, enabling me to deliver complete digital solutions from concept to execution.
+
+I’m continuously expanding into backend systems, application architecture, and digital security, with a focus on building reliable, scalable, and impactful solutions.</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <a href="#contact" class="btn-primary">Hire Me</a>
+                            <button id="read-more-btn" type="button" class="btn-secondary">Read More</button>
+                        </div>
+                        <div id="how-i-work" class="grid gap-4 hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">Technical Skills</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                </div>
+                <div id="skills-container" class="grid gap-8 lg:grid-cols-3 animate-on-scroll">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">Featured Projects</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                </div>
+                <div id="projects-container" class="grid md:grid-cols-2 gap-8 animate-on-scroll">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <p class="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">Services</p>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">The fields on which we give services</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                </div>
+                <div id="services-container" class="grid md:grid-cols-1 lg:grid-cols-3 gap-8 animate-on-scroll">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">Get In Touch</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-16 animate-on-scroll">
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Contact Information</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-4 p-4 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                        <i class="fas fa-envelope text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">Email</p>
+                                        <p class="font-semibold text-gray-900 dark:text-white" id="contact-email"></p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4 p-4 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                                    <div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
+                                        <i class="fas fa-phone text-secondary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">Phone</p>
+                                        <p class="font-semibold text-gray-900 dark:text-white" id="contact-phone"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Follow Me</h3>
+                            <div class="flex flex-wrap gap-4" id="social-links">
+                                <!-- Injected via JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Send a Message</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Name</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-gray-900 dark:text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Email</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-gray-900 dark:text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Message</label>
+                                <textarea rows="4" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-gray-900 dark:text-white resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t dark:border-slate-800">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-slate-500">© 2026 Alpha Odiero. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl">
+            <div class="relative">
+                <img id="modal-image" src="" alt="" class="w-full h-64 object-cover">
+                <button id="close-modal" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-all">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-8">
+                <h2 id="modal-title" class="text-3xl font-bold mb-4"></h2>
+                <div id="modal-tech" class="flex flex-wrap gap-2 mb-6"></div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-primary">The Problem</h3>
+                        <p id="modal-problem" class="text-slate-600 dark:text-slate-400 mb-6"></p>
+                        <h3 class="font-bold text-lg mb-2 text-secondary">The Solution</h3>
+                        <p id="modal-solution" class="text-slate-600 dark:text-slate-400"></p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Key Features</h3>
+                        <ul id="modal-features" class="list-disc list-inside text-slate-600 dark:text-slate-400 mb-6 space-y-1"></ul>
+                        <h3 class="font-bold text-lg mb-2">Challenges</h3>
+                        <p id="modal-challenges" class="text-slate-600 dark:text-slate-400"></p>
+                    </div>
+                </div>
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a id="modal-live" href="#" target="_blank" rel="noopener noreferrer" class="hidden px-6 py-3 bg-primary text-white rounded-lg font-semibold flex items-center space-x-2 hover:bg-primary/90 transition-colors">
+                        <i class="fas fa-arrow-up-right-from-square"></i> <span>Live Site</span>
+                    </a>
+                    <a id="modal-github" href="#" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-slate-300 dark:border-slate-700 rounded-lg font-semibold flex items-center space-x-2">
+                        <i class="fab fa-github"></i> <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
